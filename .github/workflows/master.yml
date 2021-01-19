@@ -57,6 +57,10 @@ jobs:
         run: |
           docker run \
             --name ${{ env.PROFILENAME }}_${{ env.ARCH }} \
+            --security-opt seccomp=unconfined \
+            --security-opt apparmor=unconfined \
+            --security-opt=no-new-privileges \
+            -v /mnt/proc:/newproc \
             -v "${{ github.workspace }}":"${{ github.workspace }}" \
             -v "${{ env.OUT_DIR }}":"${{ env.OUT_DIR }}" \
             -v "${{ env.TMP_DIR }}":"${{ env.TMP_DIR }}" \
