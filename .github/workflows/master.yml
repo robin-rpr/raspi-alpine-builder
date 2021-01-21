@@ -25,6 +25,7 @@ jobs:
     needs: [publish]
     timeout-minutes: 15
     strategy:
+      fail-fast: false
       matrix:
         version: [ v3.11, edge ]
     env:
