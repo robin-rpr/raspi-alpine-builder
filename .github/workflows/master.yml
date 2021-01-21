@@ -28,7 +28,7 @@ jobs:
       # Meta Preferences
       TAG: try
       ARCH: armv8
-      VERSION: edge
+      VERSION: v3.11
       FILE_EXT: img.gz
       PROFILENAME: bboehmke
       # Working Directories
